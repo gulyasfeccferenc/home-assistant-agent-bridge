@@ -1,0 +1,19 @@
+configuration:
+  mcp_token:
+    name: MCP hozzáférési token
+    description: Minden MCP kliensnek ezt a Bearer tokent kell használnia a bridge eléréséhez.
+
+  max_history_hours:
+    name: Maximális előzmény-időtartam
+    description: Legfeljebb ennyi órányi Home Assistant előzményt kérdezhet le egy MCP kérés.
+
+  max_results:
+    name: Maximális találatszám
+    description: Legfeljebb ennyi entityt ad vissza egy keresés.
+
+  redact_sensitive_data:
+    name: Érzékeny adatok kitakarása
+    description: Tokenek, jelszavak és hasonló érzékeny értékek eltávolítása az agentnek visszaadott adatokból.
+
+network:
+  8099/TCP: MCP Streamable HTTP végpont

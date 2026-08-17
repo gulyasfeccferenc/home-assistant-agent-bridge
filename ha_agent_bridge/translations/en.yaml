@@ -1,0 +1,19 @@
+configuration:
+  mcp_token:
+    name: MCP access token
+    description: Bearer token required from every MCP client connecting to this bridge.
+
+  max_history_hours:
+    name: Maximum history period
+    description: Maximum number of hours an MCP request may query from Home Assistant history.
+
+  max_results:
+    name: Maximum result count
+    description: Maximum number of entities returned by search tools.
+
+  redact_sensitive_data:
+    name: Redact sensitive data
+    description: Remove tokens, passwords and similar sensitive values from data returned to agents.
+
+network:
+  8099/TCP: MCP Streamable HTTP endpoint
