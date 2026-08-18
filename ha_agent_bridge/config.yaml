@@ -1,0 +1,33 @@
+name: "Home Assistant Agent Bridge"
+version: "0.1.0"
+slug: "ha_agent_bridge"
+description: "Read-only MCP bridge for Home Assistant runtime diagnostics"
+
+arch:
+  - amd64
+  - aarch64
+
+startup: application
+boot: auto
+init: false
+stage: experimental
+
+homeassistant_api: true
+
+ports:
+  8099/tcp: 8099
+
+ports_description:
+  8099/tcp: "MCP Streamable HTTP endpoint"
+
+options:
+  mcp_token: null
+  max_history_hours: 168
+  max_results: 50
+  redact_sensitive_data: true
+
+schema:
+  mcp_token: password
+  max_history_hours: "int(1,720)"
+  max_results: "int(1,200)"
+  redact_sensitive_data: bool
